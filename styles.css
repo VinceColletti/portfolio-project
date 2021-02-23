@@ -42,21 +42,14 @@ Styling
 aside{
   background-color: teal;
   display: inline-block;
-  width: 200px;
-  min-height: 400px;
 }
 main{
   background-color: white;
   display: inline-block;
   vertical-align: top;
-  width: 60%;
-  min-height: 400px;
 }
 footer{
   background-color: rgb(168, 168, 168);
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 25px;
   font-size: .8em;
@@ -69,7 +62,8 @@ img[src$="DSNN-Logo.png"]{
 .wrapper{
   background-color: rgb(204, 204, 204);
   min-height: 100vh;
-  /* display: grid; */
+  display: flex;
+  flex-direction: column;
 }
 .live-scores{
   background-color: yellow;
@@ -78,8 +72,6 @@ img[src$="DSNN-Logo.png"]{
 .navbar{
   background-color: rgb(22, 22, 22);
   color: white;
-  /* display: grid; */
-  /* justify-content: space-around; */
   height: 40px;
   line-height: 40px;
 }
@@ -90,24 +82,87 @@ img[src$="DSNN-Logo.png"]{
   vertical-align: top;
   margin-left: 5px;
 }
+.content{
+  display: flex;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 480px){
-  .nav-item-sm{
-    width: 100%;
-  }
   .nav-sm{
     height: 255px;
     text-align: center;
+    order: 0;
+  }
+  .nav-item-sm{
+    width: 100%;
+  }
+  .score-sm{
+    order: 3;
+  }
+  .content-sm{
+    flex-direction: column;
+  }
+  .aside-sm{
+    width: 100%;
+    min-height: 190px;
+    order: 4;
+  }
+  .main-sm{
+    width: 100%;
+    height: 400px;
+    order: 2;
   }
   .ft-sm{
     position: static;
+    order: 5;
   }
 }
 
 @media only screen and (min-width: 481px){
+  .content-md{
+    flex-direction: column;
+  }
+  .aside-md{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    order: 2;
+  }
+  .main-md{
+    width: 480px;
+    height: 400px;
+    align-self: center;
+    margin-top: 20px;
+    order: 1;
+  }
+  .ft-md{
+    position: static;
+    order: 5;
+  }
   
 }
 
 @media only screen and (min-width: 1024px){
-  
+  .content-lg{
+    flex-direction: row;
+  }
+  .aside-lg{
+    width: 200px;
+    min-height: 600px;
+    margin-top: 20px;
+    order: 1;
+  }
+  .main-lg{
+    width: 750px;
+    height: 600px;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+    order: 2;
+  }
+  .ft-lg{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
 }
