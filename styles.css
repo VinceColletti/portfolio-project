@@ -39,14 +39,17 @@ Styling
 *{
   font-family: Arial, Helvetica, sans-serif;
 }
+
 aside{
-  background-color: teal;
-  display: inline-block;
+  /* background-color: teal; */
+  display: flex;
+  margin-top: 20px;
 }
 main{
   background-color: white;
   display: inline-block;
   vertical-align: top;
+  /* border: 2px solid gray; */
 }
 footer{
   background-color: rgb(168, 168, 168);
@@ -60,14 +63,24 @@ img[src$="DSNN-Logo.png"]{
   width: 100px;
 }
 .wrapper{
-  background-color: rgb(204, 204, 204);
+  background-color: #ddd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.live-scores{
-  background-color: yellow;
-  height: 50px;
+.live-text{
+  margin-top: 9px;
+  font-size: 15pt;
+  color: red;
+}
+.score-tracker{
+  background-color: white;
+  display: flex;
+  min-height: 40px;
+  font-size: .7em;
+}
+.score{
+  margin-top: 7px;
 }
 .navbar{
   background-color: rgb(22, 22, 22);
@@ -82,12 +95,71 @@ img[src$="DSNN-Logo.png"]{
   vertical-align: top;
   margin-left: 5px;
 }
+.navbar > a:first-child{
+  margin-left: 20px;
+}
 .content{
   display: flex;
   justify-content: center;
 }
+.top-stories{
+  background-color: white;
+  width: 250px;
+  height: 220px;
+  border-radius: 10px;
+}
+.top-stories > h2{
+  padding: 10px 0 15px 15px;
+  border-bottom: 3px solid black;
+}
+.top-stories > a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0 0 15px;
+}
+.top-stories > a:last-child{
+  padding-bottom: 10px;
+}
+.sign-in{
+  background-color: white;
+  width: 250px;
+  /* height: 150px; */
+  border-radius: 10px;
+  text-align: center;
+}
+.button-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30px;
+  margin: 10px 0 25px 0;
+}
+.sign-in-button{
+  background-color: #2b77e4;
+  color: white;
+  box-shadow: 3px 3px 2px black;
+}
+.sign-up-button{
+  box-shadow: 3px 3px 2px black;  
+}
+.subscribe{
+  background-color: white;
+  width: 250px;
+  /* height: 200px; */
+  border-radius: 10px;
+  text-align: center;
+}
+h4{
+  padding: 10px 0;
+}
+.subscribe-button{
+  background-color: #ffe59a;
+  width: 75%;
+  margin: 20px 12% 30px;
+  box-shadow: 3px 3px 2px black;
+}
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 580px){
   .nav-sm{
     height: 255px;
     text-align: center;
@@ -96,7 +168,9 @@ img[src$="DSNN-Logo.png"]{
   .nav-item-sm{
     width: 100%;
   }
-  .score-sm{
+  .score-tracker-sm{
+    flex-direction: column;
+    text-align: center;
     order: 3;
   }
   .content-sm{
@@ -104,12 +178,30 @@ img[src$="DSNN-Logo.png"]{
   }
   .aside-sm{
     width: 100%;
-    min-height: 190px;
     order: 4;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .top-stories-sm{
+    border: 2px solid gray;
+    align-self: center;
+    height: auto;
+  }
+  .sign-in-sm{
+    align-self: center;
+    border: 2px solid gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .subscribe-sm{
+    align-self: center;
+    border: 2px solid gray;
+    margin-bottom: 20px;
   }
   .main-sm{
     width: 100%;
     height: 400px;
+    /* border: none; */
     order: 2;
   }
   .ft-sm{
@@ -118,19 +210,31 @@ img[src$="DSNN-Logo.png"]{
   }
 }
 
-@media only screen and (min-width: 481px){
+@media only screen and (min-width: 581px){
+  .score-tracker-md{
+    justify-content: space-around;
+  }
   .content-md{
     flex-direction: column;
   }
   .aside-md{
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    height: 200px;
-    margin-top: 20px;
+    /* height: 200px; */
+    /* margin-top: 20px; */
     order: 2;
+  }
+  .sign-in-md{
+    margin-left: 10px;
+  }
+  .subscribe-md{
+    margin-left: 10px;
   }
   .main-md{
     width: 480px;
     height: 400px;
+    border-radius: 10px;
     align-self: center;
     margin-top: 20px;
     order: 1;
@@ -143,22 +247,34 @@ img[src$="DSNN-Logo.png"]{
 }
 
 @media only screen and (min-width: 1024px){
+  .score-tracker-lg{
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 100px 0 100px;
+  }
   .content-lg{
     flex-direction: row;
   }
   .aside-lg{
-    width: 200px;
-    min-height: 600px;
-    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    width: 250px;
+    /* min-height: 604px; */
+    /* margin-top: 20px; */
     order: 1;
   }
+  .sign-in-lg, .subscribe-lg{
+    margin: 10px 0 0 0;
+  }
   .main-lg{
-    width: 750px;
+    width: 600px;
     height: 600px;
     align-self: flex-start;
     margin-top: 20px;
     margin-left: 20px;
     order: 2;
+    border-radius: 10px;
   }
   .ft-lg{
     position: fixed;
