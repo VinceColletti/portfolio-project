@@ -56,6 +56,16 @@ main > ul{
   font-size: 2em;
   margin-top: 20px;
   color: red;
+  animation: liveBlink 1.5s;
+  animation-iteration-count: infinite;
+}
+main > h1:first-of-type{
+  color: red;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: -15px;
+  margin-right: 20px;
+  font-weight: lighter;
 }
 main > p{
   padding: 20px 80px 0 80px;
@@ -455,5 +465,20 @@ footer{
   }
   .sign-in-lg, .subscribe-lg{
     margin: 25px 0 0 0;
+  }
+}
+
+@keyframes liveBlink{
+  from{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  95%{
+    opacity: 0 ;
+  }
+  to{
+    opacity: 0;
   }
 }
