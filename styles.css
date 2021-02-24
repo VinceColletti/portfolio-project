@@ -66,6 +66,10 @@ footer{
 img[src$="DSNN-Logo.png"]{
   width: 100px;
 }
+iframe{
+  display: block;
+  margin: 0 auto;
+}
 .wrapper{
   background-color: #ddd;
   min-height: 100vh;
@@ -153,16 +157,6 @@ main > ul{
   margin-top: 20px;
   color: red;
 }
-/* main > h1{
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-} */
-/* .game{
-  display: flex;
-  justify-content: space-around;
-} */
 main > p{
   padding: 20px 80px 0 80px;
   text-align: left;
@@ -172,7 +166,6 @@ main > p > a{
   color: #346595;
 }
 .team-box{
-  /* background-color: teal; */
   width: 160px;
   margin-bottom: 30px;
 }
@@ -187,7 +180,6 @@ main > p > a{
   margin: 20px 0;
 }
 .game-mid-box{
-  /* background-color: teal; */
   width: 160px;
   padding-top: 30px;
 }
@@ -219,13 +211,11 @@ main > p > a{
     justify-content: flex-start;
   }
   .top-stories-sm{
-    border: 2px solid gray;
     align-self: center;
     height: auto;
   }
   .sign-in-sm{
     align-self: center;
-    border: 2px solid gray;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -247,7 +237,6 @@ main > p > a{
   }
   .subscribe-sm{
     align-self: center;
-    border: 2px solid gray;
     margin-bottom: 20px;
   }
   .main-sm{
@@ -361,6 +350,9 @@ main > p > a{
   .sign-up-button-lg{
     width: 40%;
     font-size: 1.3em;
+  }
+  .iframe-lg{
+    display: none;
   }
   .main-lg{
     width: 700px;
