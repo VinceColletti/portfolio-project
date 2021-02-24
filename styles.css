@@ -41,16 +41,18 @@ Styling
 }
 
 aside{
-  /* background-color: teal; */
   display: flex;
   margin-top: 20px;
+}
+button{
+  height: 40px;
+  box-shadow: 3px 3px 2px black;
 }
 main{
   background-color: white;
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  /* border: 2px solid gray; */
 }
 footer{
   background-color: rgb(168, 168, 168);
@@ -58,6 +60,7 @@ footer{
   height: 25px;
   font-size: .8em;
   text-align: center;
+  margin-top: auto;
   border-top: 1px solid gray;
 }
 img[src$="DSNN-Logo.png"]{
@@ -105,48 +108,32 @@ img[src$="DSNN-Logo.png"]{
 }
 .top-stories{
   background-color: white;
-  width: 250px;
+  width: 300px;
   height: 220px;
   border-radius: 10px;
 }
 .top-stories > h2{
-  padding: 10px 0 15px 15px;
+  padding: 10px 0 15px 10%;
   border-bottom: 3px solid black;
 }
 .top-stories > a{
   display: block;
   color: black;
   text-decoration: none;
-  margin: 10px 0 0 15px;
+  margin: 10px 0 0 10%;
 }
 .top-stories > a:last-child{
   padding-bottom: 10px;
 }
 .sign-in{
   background-color: white;
-  width: 250px;
-  /* height: 150px; */
+  width: 300px;
   border-radius: 10px;
   text-align: center;
 }
-.button-container{
-  display: flex;
-  justify-content: space-around;
-  padding: 0 30px;
-  margin: 10px 0 25px 0;
-}
-.sign-in-button{
-  background-color: #2b77e4;
-  color: white;
-  box-shadow: 3px 3px 2px black;
-}
-.sign-up-button{
-  box-shadow: 3px 3px 2px black;  
-}
 .subscribe{
   background-color: white;
-  width: 250px;
-  /* height: 200px; */
+  width: 300px;
   border-radius: 10px;
   text-align: center;
 }
@@ -157,28 +144,25 @@ h4{
   background-color: #ffe59a;
   width: 75%;
   margin: 20px 12% 30px;
-  box-shadow: 3px 3px 2px black;
+  font-size: 1.3em;
 }
 main > ul{
   display: inline-block;
   vertical-align: top;
   font-size: 2em;
   margin-top: 20px;
-  /* margin-left: 5%; */
   color: red;
 }
-main > h1{
+/* main > h1{
   display: inline-block;
   margin-top: 20px;
   margin-left: 10px;
   margin-bottom: 20px;
-}
-.game{
-  /* background-color: turquoise; */
-  height: 275px;
+} */
+/* .game{
   display: flex;
   justify-content: space-around;
-}
+} */
 main > p{
   padding: 20px 80px 0 80px;
   text-align: left;
@@ -188,11 +172,12 @@ main > p > a{
   color: #346595;
 }
 .team-box{
-  /* background-color: yellow; */
+  /* background-color: teal; */
   width: 160px;
+  margin-bottom: 30px;
 }
 .team-box > img{
-  width: 100px;
+  width: 150px;
   border: 1px solid rgb(160, 160, 160);
 }
 .team-box > h5{
@@ -202,7 +187,7 @@ main > p > a{
   margin: 20px 0;
 }
 .game-mid-box{
-  /* background-color: aquamarine; */
+  /* background-color: teal; */
   width: 160px;
   padding-top: 30px;
 }
@@ -244,6 +229,22 @@ main > p > a{
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .button-container-sm{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
+  .sign-in-button-sm{
+    background-color: #2b77e4;
+    width: 40%;
+    color: white;
+    margin-right: 10px;
+    font-size: 1.3em;
+  }
+  .sign-up-button-sm{
+    width: 40%;
+    font-size: 1.3em;
+  }
   .subscribe-sm{
     align-self: center;
     border: 2px solid gray;
@@ -252,14 +253,18 @@ main > p > a{
   .main-sm{
     width: 100%;
     height: 400px;
-    /* border: none; */
     order: 2;
+  }
+  .main-sm > h1{
+    display: none;
+  }
+  .game-container-sm{
+    display: none;
   }
   .game-text-sm{
     display: none;
   }
   .ft-sm{
-    position: static;
     order: 5;
   }
 }
@@ -275,12 +280,26 @@ main > p > a{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    /* height: 200px; */
-    /* margin-top: 20px; */
     order: 2;
   }
   .sign-in-md{
     margin-left: 10px;
+  }
+  .button-container-md{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
+  .sign-in-button-md{
+    background-color: #2b77e4;
+    width: 40%;
+    color: white;
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+  .sign-up-button-md{
+    width: 40%;
+    font-size: 1.1em;
   }
   .subscribe-md{
     margin-left: 10px;
@@ -293,11 +312,16 @@ main > p > a{
     margin-top: 20px;
     order: 1;
   }
+  .main-md > h1{
+    display: none;
+  }
+  .game-container-md{
+    display: none;
+  }
   .game-text-md{
     display: none;
   }
   .ft-md{
-    position: static;
     order: 5;
   }
   
@@ -316,29 +340,49 @@ main > p > a{
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-end;
-    width: 250px;
-    /* min-height: 604px; */
-    /* margin-top: 20px; */
+    width: 300px;
     order: 1;
   }
   .sign-in-lg, .subscribe-lg{
-    margin: 10px 0 0 0;
+    margin: 25px 0 0 0;
+  }
+  .button-container-lg{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
+  .sign-in-button-lg{
+    background-color: #2b77e4;
+    width: 40%;
+    color: white;
+    margin-right: 10px;
+    font-size: 1.3em;
+  }
+  .sign-up-button-lg{
+    width: 40%;
+    font-size: 1.3em;
   }
   .main-lg{
-    width: 600px;
-    height: 446px;
+    width: 700px;
+    height: 550px;
     align-self: flex-start;
     margin-top: 20px;
     margin-left: 20px;
     border-radius: 10px;
     order: 2;
   }
+  .main-lg > h1{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .game-container-lg{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+  }
   .game-text-lg{
     display: block;
-  }
-  .ft-lg{
-    position: fixed;
-    left: 0;
-    bottom: 0;
   }
 }
