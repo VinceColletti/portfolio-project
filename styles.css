@@ -32,112 +32,21 @@ object {
     border: 0;
 }
 
-/*=============== 
-Global Typography
-===============*/
+/*===== 
+Styling
+=====*/
 
 *{
   font-family: Arial, Helvetica, sans-serif;
 }
-h4{
-  padding: 10px 0;
-}
-.game-mid-box > p:first-of-type{
-  margin-top: 60px;
-}
-.live-text{
-  margin-top: 6px;
-  font-size: 20pt;
-  color: red;
-}
-main > ul{
-  display: inline-block;
-  vertical-align: top;
-  font-size: 2em;
-  margin-top: 20px;
-  color: red;
-}
-main > p{
-  padding: 20px 80px 0 80px;
-  text-align: left;
-  border-top: 3px solid black;
-}
-main > p > a{
-  color: #346595;
-}
-.team-box > h5{
-  margin-top: 10px;
-}
-.team-box > p{
-  margin: 20px 0;
-}
-.top-stories > h2{
-  padding: 10px 0 15px 10%;
-  border-bottom: 3px solid black;
-}
-
-/*================= 
-Links 
-=================*/
-
-.navbar > a{
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 5px;
-}
-.navbar > a:first-child{
-  margin-left: 20px;
-}
-.top-stories > a{
-  display: block;
-  color: black;
-  text-decoration: none;
-  margin: 10px 0 0 10%;
-}
-.top-stories > a:last-child{
-  padding-bottom: 10px;
-}
-
-/*============== 
-Buttons 
-==============*/
-
-button{
-  height: 40px;
-  box-shadow: 3px 3px 2px black;
-}
-.subscribe-button{
-  background-color: #ffe59a;
-  width: 75%;
-  margin: 20px 12% 30px;
-  font-size: 1.3em;
-}
-
-/*=============== 
-Images & Video 
-===============*/
-
-img[src$="DSNN-Logo.png"]{
-  width: 100px;
-}
-.team-box > img{
-  width: 150px;
-  border: 1px solid rgb(160, 160, 160);
-}
-iframe{
-  display: block;
-  margin: 0 auto;
-}
-
-/*============ 
-containers 
-============*/
 
 aside{
   display: flex;
   margin-top: 20px;
+}
+button{
+  height: 40px;
+  box-shadow: 3px 3px 2px black;
 }
 main{
   background-color: white;
@@ -154,13 +63,32 @@ footer{
   margin-top: auto;
   border-top: 1px solid gray;
 }
-.content{
-  display: flex;
-  justify-content: center;
+img[src$="DSNN-Logo.png"]{
+  width: 100px;
 }
-.game-mid-box{
-  width: 160px;
-  padding-top: 30px;
+iframe{
+  display: block;
+  margin: 0 auto;
+}
+.wrapper{
+  background-color: #ddd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.live-text{
+  margin-top: 6px;
+  font-size: 20pt;
+  color: red;
+}
+.score-tracker{
+  background-color: white;
+  display: flex;
+  min-height: 40px;
+  font-size: .8em;
+}
+.score{
+  margin-top: 5px;
 }
 .navbar{
   background-color: rgb(22, 22, 22);
@@ -168,14 +96,38 @@ footer{
   height: 40px;
   line-height: 40px;
 }
-.score{
-  margin-top: 5px;
+.navbar > a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
 }
-.score-tracker{
-  background-color: white;
+.navbar > a:first-child{
+  margin-left: 20px;
+}
+.content{
   display: flex;
-  min-height: 40px;
-  font-size: .8em;
+  justify-content: center;
+}
+.top-stories{
+  background-color: white;
+  width: 300px;
+  height: 220px;
+  border-radius: 10px;
+}
+.top-stories > h2{
+  padding: 10px 0 15px 10%;
+  border-bottom: 3px solid black;
+}
+.top-stories > a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0 0 10%;
+}
+.top-stories > a:last-child{
+  padding-bottom: 10px;
 }
 .sign-in{
   background-color: white;
@@ -189,39 +141,89 @@ footer{
   border-radius: 10px;
   text-align: center;
 }
+h4{
+  padding: 10px 0;
+}
+.subscribe-button{
+  background-color: #ffe59a;
+  width: 75%;
+  margin: 20px 12% 30px;
+  font-size: 1.3em;
+}
+main > ul{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2em;
+  margin-top: 20px;
+  color: red;
+}
+main > p{
+  padding: 20px 80px 0 80px;
+  text-align: left;
+  border-top: 3px solid black;
+}
+main > p > a{
+  color: #346595;
+}
 .team-box{
   width: 160px;
   margin-bottom: 30px;
 }
-.top-stories{
-  background-color: white;
-  width: 300px;
-  height: 220px;
-  border-radius: 10px;
+.team-box > img{
+  width: 150px;
+  border: 1px solid rgb(160, 160, 160);
 }
-.wrapper{
-  background-color: #ddd;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.team-box > h5{
+  margin-top: 10px;
 }
-
-
+.team-box > p{
+  margin: 20px 0;
+}
+.game-mid-box{
+  width: 160px;
+  padding-top: 30px;
+}
+.game-mid-box > p:first-of-type{
+  margin-top: 60px;
+}
 
 @media only screen and (max-width: 580px){
-
-  /*====================== 
-  small screen typography 
-  ======================*/
-
-  .main-sm > h1{
-    display: none;
+  .score-tracker-sm{
+    flex-direction: column;
+    text-align: center;
+    order: 3;
   }
-
-  /*================== 
-  small screen buttons 
-  ==================*/
-
+  .nav-sm{
+    height: 255px;
+    text-align: center;
+    order: 0;
+  }
+  .nav-item-sm{
+    width: 100%;
+  }
+  .content-sm{
+    flex-direction: column;
+  }
+  .aside-sm{
+    width: 100%;
+    order: 4;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .top-stories-sm{
+    align-self: center;
+    height: auto;
+  }
+  .sign-in-sm{
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .button-container-sm{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
   .sign-in-button-sm{
     background-color: #2b77e4;
     width: 40%;
@@ -233,80 +235,50 @@ footer{
     width: 40%;
     font-size: 1.3em;
   }
-
-  /*============================ 
-  display: none; on small screen 
-  ============================*/
-
-  .game-container-sm{
-    display: none;
-  }
-  .game-text-sm{
-    display: none;
-  }
-
-  /*===================== 
-  Small screen containers 
-  =====================*/
-
-  .aside-sm{
-    width: 100%;
-    order: 4;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .button-container-sm{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 50px 0;
-  }
-  .content-sm{
-    flex-direction: column;
-  }
-  .ft-sm{
-    order: 5;
+  .subscribe-sm{
+    align-self: center;
+    margin-bottom: 20px;
   }
   .main-sm{
     width: 100%;
     height: 400px;
     order: 2;
   }
-  .nav-sm{
-    height: 255px;
-    text-align: center;
-    order: 0;
+  .main-sm > h1{
+    display: none;
   }
-  .nav-item-sm{
-    width: 100%;
+  .game-container-sm{
+    display: none;
   }
-  .score-tracker-sm{
-    flex-direction: column;
-    text-align: center;
-    order: 3;
+  .game-text-sm{
+    display: none;
   }
-  .sign-in-sm{
-    align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .subscribe-sm{
-    align-self: center;
-    margin-bottom: 20px;
-  }
-  .top-stories-sm{
-    align-self: center;
-    height: auto;
+  .ft-sm{
+    order: 5;
   }
 }
 
-
-
 @media only screen and (min-width: 581px){
-
-  /*====================== 
-  medium screen buttons
-  ======================*/
-
+  .score-tracker-md{
+    justify-content: space-around;
+  }
+  .content-md{
+    flex-direction: column;
+  }
+  .aside-md{
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    order: 2;
+  }
+  .sign-in-md{
+    margin-left: 10px;
+  }
+  .button-container-md{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
   .sign-in-button-md{
     background-color: #2b77e4;
     width: 40%;
@@ -318,41 +290,8 @@ footer{
     width: 40%;
     font-size: 1.1em;
   }
-
-  /*============================== 
-  display: none; on medium screens 
-  ==============================*/
-
-  .main-md > h1{
-    display: none;
-  }
-  .game-container-md{
-    display: none;
-  }
-  .game-text-md{
-    display: none;
-  }
-
-  /*====================== 
-  Medium screen containers 
-  ======================*/
-
-  .aside-md{
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    order: 2;
-  }
-  .button-container-md{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 50px 0;
-  }
-  .content-md{
-    flex-direction: column;
-  }
-  .ft-md{
-    order: 5;
+  .subscribe-md{
+    margin-left: 10px;
   }
   .main-md{
     width: 480px;
@@ -362,39 +301,45 @@ footer{
     margin-top: 20px;
     order: 1;
   }
-  .score-tracker-md{
-    justify-content: space-around;
+  .main-md > h1{
+    display: none;
   }
-  .sign-in-md{
-    margin-left: 10px;
+  .game-container-md{
+    display: none;
   }
-  .subscribe-md{
-    margin-left: 10px;
+  .game-text-md{
+    display: none;
   }
+  .ft-md{
+    order: 5;
+  }
+  
 }
 
-
-
 @media only screen and (min-width: 1024px){
-
-  /*===================== 
-  large screen typography 
-  =====================*/
-
-  .main-lg > h1{
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+  .score-tracker-lg{
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 100px 0 100px;
   }
-  .game-text-lg{
-    display: block;
+  .content-lg{
+    flex-direction: row;
   }
-
-  /*================== 
-  large screen buttons 
-  ==================*/
-
+  .aside-lg{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    width: 300px;
+    order: 1;
+  }
+  .sign-in-lg, .subscribe-lg{
+    margin: 25px 0 0 0;
+  }
+  .button-container-lg{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+  }
   .sign-in-button-lg{
     background-color: #2b77e4;
     width: 40%;
@@ -406,38 +351,8 @@ footer{
     width: 40%;
     font-size: 1.3em;
   }
-
-  /*============================= 
-  display: none; on large screens 
-  =============================*/
-
   .iframe-lg{
     display: none;
-  }
-
-  /*===================== 
-  large screen containers 
-  =====================*/
-
-  .aside-lg{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-end;
-    width: 300px;
-    order: 1;
-  }
-  .button-container-lg{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 50px 0;
-  }
-  .content-lg{
-    flex-direction: row;
-  }
-  .game-container-lg{
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5em;
   }
   .main-lg{
     width: 700px;
@@ -448,12 +363,18 @@ footer{
     border-radius: 10px;
     order: 2;
   }
-  .score-tracker-lg{
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0 100px 0 100px;
+  .main-lg > h1{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
   }
-  .sign-in-lg, .subscribe-lg{
-    margin: 25px 0 0 0;
+  .game-container-lg{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+  }
+  .game-text-lg{
+    display: block;
   }
 }
