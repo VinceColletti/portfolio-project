@@ -41,6 +41,11 @@ Global Typography
 }
 h4{
   padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+aside h5{
+  font-size: 1em;
 }
 .game-mid-box > p:first-of-type{
   margin-top: 60px;
@@ -112,7 +117,7 @@ main > p > a:hover{
   display: block;
   color: black;
   text-decoration: none;
-  margin: 10px 0 0 10%;
+  margin: 5px 0 0 10%;
 }
 .top-stories > a:last-child{
   padding-bottom: 10px;
@@ -430,7 +435,7 @@ footer{
   }
   .main-md{
     width: 480px;
-    height: 420px;
+    height: 435px;
     border-radius: 10px;
     align-self: center;
     margin-top: 20px;
