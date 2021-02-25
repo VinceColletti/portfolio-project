@@ -103,7 +103,6 @@ main > p > a:hover{
   margin-left: 5px;
 }
 .navigation > li > a:not(.nohover):hover{
-  /* border: 1px solid red; */
   color: red;
 }
 .navigation > li > a:first-child{
@@ -122,7 +121,6 @@ main > p > a:hover{
   color: red;
 }
 
-
 /*============== 
 inputs
 ==============*/
@@ -134,13 +132,35 @@ button{
 .subscribe-button{
   background-color: #ffe59a;
   width: 75%;
-  margin: 20px 12% 30px;
+  margin: 20px 0 30px;
   font-size: 1.3em;
 }.navigation button{
   height: 30px;
+  width: 35px;
+  vertical-align: top;
+}
+.navigation button > img{
+  width: 20px;
 }
 .navigation input{
+  vertical-align: top;
   height: 30px;
+  padding-left: 5px;
+}
+.navigation input:focus{
+  outline: none;
+}
+.subscribe > input{
+  border: 2px solid gray;
+  width: 70%;
+  height: 30px;
+  padding-left: 3%;
+  margin-top: 20px;
+  box-shadow: 3px 3px 2px rgb(0, 0, 0);
+  border: 1px solid black;
+}
+.subscribe > input:focus{
+  outline: none;
 }
 
 /*=============== 
@@ -205,11 +225,6 @@ footer{
   background-color: white;
   display: flex;
   min-height: 40px;
-  font-size: .8em;
-}
-.search-box-with-button{
-  position: absolute;
-  right: 0;
 }
 .sign-in{
   background-color: white;
@@ -240,9 +255,7 @@ footer{
   flex-direction: column;
 }
 
-
-
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 480px){
 
   /*====================== 
   small screen typography 
@@ -250,6 +263,12 @@ footer{
 
   .main-sm > h1{
     display: none;
+  }
+  .game-text-sm{
+    display: block;
+    padding: 20px 35px 0 35px;
+    height: 75px;
+    overflow-y: scroll;
   }
 
   /*================== 
@@ -282,11 +301,6 @@ footer{
 
   .game-container-sm{
     display: none;
-  }
-  .game-text-sm{
-    display: block;
-    padding: 20px 35px 0 35px;
-    overflow: scroll;
   }
 
   /*===================== 
@@ -324,6 +338,7 @@ footer{
   .score-tracker-sm{
     flex-direction: column;
     text-align: center;
+    font-size: .8em;
     order: 3;
   }
   .search-box-with-button-sm{
@@ -331,8 +346,7 @@ footer{
   }
   .sign-in-sm{
     align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   .subscribe-sm{
     align-self: center;
@@ -346,7 +360,7 @@ footer{
 
 
 
-@media only screen and (min-width: 581px){
+@media only screen and (min-width: 481px){
 
   /*====================== 
   medium screen inputs
@@ -374,20 +388,17 @@ footer{
   .game-container-md{
     display: none;
   }
-  .game-text-md{
-    display: block;
-    padding: 20px 15px 0 15px;
-}
-
+  
   /*====================== 
   Medium screen containers 
   ======================*/
 
   .aside-md{
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    order: 2;
+    width: 300px;
+    order: 4;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
   }
   .button-container-md{
     display: flex;
@@ -400,6 +411,10 @@ footer{
   .ft-md{
     order: 5;
   }
+  .game-text-md{
+    display: block;
+    padding: 20px 15px 0 15px;
+  }
   .main-md{
     width: 480px;
     height: 420px;
@@ -408,18 +423,63 @@ footer{
     margin-top: 20px;
     order: 1;
   }
+  .navigation-md{
+    flex-direction: column;
+    height: 300px;
+    text-align: center;
+    order: 0;
+  }
   .score-tracker-md{
     justify-content: space-around;
+    font-size: .62em;
+  }
+  .search-box-with-button-md{
+    position: relative;
   }
   .sign-in-md{
-    margin-left: 10px;
+    margin-top: 20px;
   }
   .subscribe-md{
-    margin-left: 10px;
+    margin: 20px 0;
   }
 }
 
+@media only screen and (min-width:740px){
 
+  /*========================== 
+  intermediate size containers 
+  ==========================*/
+
+  .aside-int{
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    order: 2;
+  }
+  .navigation-int{
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+  }
+  .score-tracker-int{
+    justify-content: space-around;
+    font-size: .8em;
+  }
+  .search-box-with-button-int{
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .sign-in-int{
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .subscribe-int{
+    margin-left: 10px;
+    margin-top: 0;
+  }
+}
 
 @media only screen and (min-width: 1024px){
 
@@ -495,10 +555,22 @@ footer{
     border-radius: 10px;
     order: 2;
   }
+  .navigation-lg{
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+  }
   .score-tracker-lg{
     flex-direction: row;
     justify-content: space-around;
+    font-size: .8em;
     padding: 0 100px 0 100px;
+  }
+  .search-box-with-button-lg{
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
   }
   .sign-in-lg, .subscribe-lg{
     margin: 25px 0 0 0;
