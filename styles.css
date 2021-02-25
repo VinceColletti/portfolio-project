@@ -150,6 +150,14 @@ button{
 .navigation input:focus{
   outline: none;
 }
+.search-box{
+  height: 35px;
+}
+.search-btn{
+  height: 35px;
+  vertical-align: top;
+  box-shadow: none;
+}
 .subscribe > input{
   border: 2px solid gray;
   width: 70%;
@@ -157,10 +165,11 @@ button{
   padding-left: 3%;
   margin-top: 20px;
   box-shadow: 3px 3px 2px rgb(0, 0, 0);
-  border: 1px solid black;
+  border-radius: 5px;
+  border: 2px solid rgb(110, 110, 110);
 }
 .subscribe > input:focus{
-  outline: none;
+  outline-color: #3d86d4;
 }
 
 /*=============== 
@@ -209,6 +218,10 @@ footer{
 .game-mid-box{
   width: 160px;
   padding-top: 30px;
+}
+.navbar{
+  background-color: rgb(22, 22, 22);
+  height: 40px;
 }
 .navigation{
   background-color: rgb(22, 22, 22);
