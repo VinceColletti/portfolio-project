@@ -90,18 +90,18 @@ main > p > a{
 Links & Link effects
 ==================*/
 
-.navbar > a{
+.navigation > a{
   color: white;
   text-decoration: none;
   display: inline-block;
   vertical-align: top;
   margin-left: 5px;
 }
-.navbar > a:not(.nohover):hover{
+.navigation > a:not(.nohover):hover{
   /* border: 1px solid red; */
   color: red;
 }
-.navbar > a:first-child{
+.navigation > a:first-child{
   margin-left: 20px;
 }
 .top-stories > a{
@@ -182,7 +182,7 @@ footer{
   width: 160px;
   padding-top: 30px;
 }
-.navbar{
+.navigation{
   background-color: rgb(22, 22, 22);
   color: white;
   height: 40px;
@@ -299,12 +299,12 @@ footer{
     height: 400px;
     order: 2;
   }
-  .nav-sm{
+  .navigation-sm{
     height: 255px;
     text-align: center;
     order: 0;
   }
-  .nav-item-sm{
+  .navigation-item-sm{
     width: 100%;
   }
   .score-tracker-sm{
