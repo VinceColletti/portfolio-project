@@ -86,9 +86,9 @@ main > p > a{
   border-bottom: 3px solid black;
 }
 
-/*================= 
-Links 
-=================*/
+/*================== 
+Links & Link effects
+==================*/
 
 .navbar > a{
   color: white;
@@ -96,6 +96,10 @@ Links
   display: inline-block;
   vertical-align: top;
   margin-left: 5px;
+}
+.navbar > a:not(.nohover):hover{
+  /* border: 1px solid red; */
+  color: red;
 }
 .navbar > a:first-child{
   margin-left: 20px;
@@ -108,6 +112,12 @@ Links
 }
 .top-stories > a:last-child{
   padding-bottom: 10px;
+}
+.top-stories > a:hover{
+  color: red;
+}
+main > p > a:hover{
+  color: red;
 }
 
 /*============== 
@@ -242,6 +252,14 @@ footer{
   .sign-up-button-sm{
     width: 40%;
     font-size: 1.3em;
+  }
+
+  /*================ 
+  small screen movie 
+  =================*/
+
+  .iframe-sm{
+    width: 100%;
   }
 
   /*============================ 
