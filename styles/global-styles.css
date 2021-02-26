@@ -39,16 +39,21 @@ Global Typography
 *{
   font-family: Arial, Helvetica, sans-serif;
 }
-h4{
-  padding: 10px 0;
-  font-weight: bold;
-  font-size: 1.3em;
-}
 aside h5{
   font-size: 1em;
 }
 .game-mid-box > p:first-of-type{
   margin-top: 60px;
+}
+h4{
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+h6{
+  font-size: .75em;
+  font-weight: bold;
+  margin-top: 3px;
 }
 .live-score-text{
   margin-top: 6px;
@@ -189,9 +194,7 @@ main{
 }
 footer{
   background-color: rgb(168, 168, 168);
-  width: 100%;
-  min-height: 45px;
-  font-size: .8em;
+  min-height: 40px;
   text-align: center;
   margin-top: auto;
   border-top: 1px solid gray;
