@@ -47,9 +47,6 @@ This is for screen sizes up to a maximum of 480px
   .content-sm{
     flex-direction: column;
   }
-  .footer-sm{
-    order: 5;
-  }
   .main-sm{
     width: 100%;
     height: 420px;

@@ -30,9 +30,9 @@ This is for screen sizes from 481px to 739px
   .content-md{
     flex-direction: column;
   }
-  .footer-md{
+  /* .footer-md{
     order: 5;
-  }
+  } */
   .game-text-md{
     display: block;
     padding: 20px 15px 0 15px;
