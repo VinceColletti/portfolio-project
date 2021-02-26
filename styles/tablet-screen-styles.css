@@ -1,0 +1,58 @@
+/*========================================== 
+This is for screen sizes from 481px to 739px 
+==========================================*/
+
+@media only screen and (min-width: 481px){
+
+  /*============================== 
+  display: none; on medium screens 
+  ==============================*/
+
+  .main-md > h1{
+    display: none;
+  }
+  .game-container-md{
+    display: none;
+  }
+  
+  /*====================== 
+  Medium screen containers 
+  ======================*/
+
+  .aside-md{
+    width: 300px;
+    order: 4;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .content-md{
+    flex-direction: column;
+  }
+  .footer-md{
+    order: 5;
+  }
+  .game-text-md{
+    display: block;
+    padding: 20px 15px 0 15px;
+  }
+  .main-md{
+    width: 480px;
+    height: 435px;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: 20px;
+    order: 1;
+  }
+  .score-tracker-md{
+    justify-content: space-around;
+    font-size: .62em;
+  }
+  .sign-in-md{
+    margin-top: 20px;
+  }
+  .subscribe-md{
+    margin-top: 20px;
+  }
+}

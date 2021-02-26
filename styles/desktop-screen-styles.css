@@ -1,0 +1,67 @@
+/*=============================== 
+This is for screens 1024px and up 
+===============================*/
+
+@media only screen and (min-width: 1024px){
+
+  /*===================== 
+  large screen typography 
+  =====================*/
+
+  .main-lg > h1{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .game-text-lg{
+    display: block;
+    padding: 20px 80px 0 80px;
+  }
+
+  /*============================= 
+  display: none; on large screens 
+  =============================*/
+
+  .iframe-lg{
+    display: none;
+  }
+
+  /*===================== 
+  large screen containers 
+  =====================*/
+
+  .aside-lg{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    width: 300px;
+    order: 1;
+  }
+  .content-lg{
+    flex-direction: row;
+  }
+  .game-container-lg{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+  }
+  .main-lg{
+    width: 700px;
+    height: 550px;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    order: 2;
+  }
+  .score-tracker-lg{
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: .8em;
+    padding: 0 100px 0 100px;
+  }
+  .sign-in-lg, .subscribe-lg{
+    margin-top: 25px;
+  }
+}

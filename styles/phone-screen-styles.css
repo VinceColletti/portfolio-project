@@ -1,0 +1,76 @@
+/*===============================================
+This is for screen sizes up to a maximum of 480px 
+===============================================*/
+
+@media only screen and (max-width: 480px){
+
+  /*====================== 
+  small screen typography 
+  ======================*/
+
+  .game-text-sm{
+    display: block;
+    padding: 20px 25px 0 25px;
+    height: 75px;
+    overflow-y: scroll;
+  }
+
+  /*================ 
+  small screen movie 
+  =================*/
+
+  .iframe-sm{
+    width: 100%;
+  }
+
+  /*============================ 
+  display: none; on small screen 
+  ============================*/
+
+  .game-container-sm{
+    display: none;
+  }
+  .main-sm > h1{
+    display: none;
+  }
+
+  /*===================== 
+  Small screen containers 
+  =====================*/
+
+  .aside-sm{
+    width: 100%;
+    order: 4;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .content-sm{
+    flex-direction: column;
+  }
+  .footer-sm{
+    order: 5;
+  }
+  .main-sm{
+    width: 100%;
+    height: 420px;
+    order: 2;
+  }
+  .score-tracker-sm{
+    flex-direction: column;
+    text-align: center;
+    font-size: .8em;
+    margin-top: 20px;
+    order: 3;
+  }
+  .sign-in-sm{
+    align-self: center;
+    margin: 20px 0;
+  }
+  .subscribe-sm{
+    align-self: center;
+  }
+  .top-stories-sm{
+    align-self: center;
+    height: auto;
+  }
+}

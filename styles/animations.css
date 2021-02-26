@@ -1,0 +1,14 @@
+@keyframes liveBlink{
+  from{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  95%{
+    opacity: 0 ;
+  }
+  to{
+    opacity: 0;
+  }
+}
