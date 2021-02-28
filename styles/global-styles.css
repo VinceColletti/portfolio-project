@@ -126,6 +126,14 @@ Links & Link effects
 .drop-hover:hover{
   color: rgb(199, 0, 0);
 }
+footer a{
+  white-space: nowrap;
+  color: #346595;
+}
+footer a:hover{
+  text-decoration: none;
+  color: rgb(199, 0, 0);
+}
 main > p > a{
   white-space: nowrap;
 }
@@ -147,10 +155,6 @@ main > p > a:hover{
 }
 .top-stories > a:last-child{
   padding-bottom: 10px;
-}
-.top-stories > a:hover{
-  color: rgb(199, 0, 0);
-  transform: scale(1.2) translateX(21px);
 }
 
 /*============== 
@@ -193,11 +197,6 @@ button{
   font-size: 1.3em;
   transition: transform 100ms;
 }
-.sign-in-button:hover, 
-.sign-up-button:hover, 
-.subscribe-button:hover{
-  transform: scale(1.05);
-}
 .subscribe > input{
   width: 75%;
   height: 40px;
@@ -217,21 +216,13 @@ Images & Video
   border: 1px solid rgb(160, 160, 160);
   transition: transform 50ms;
 }
-.team-box > img:hover{
-  transform: scale(1.2) translateY(-7px);
-  box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.774);
-}
-.team-box > img[src*="ninja"]:active{
-  transform: scale(.8) translateY(-7px) rotateZ(25deg);
-  box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
-}
-.team-box > img[src*="pirate"]:active{
-  transform: scale(.8) translateY(-7px) rotateZ(-25deg);
-  box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
-}
 iframe{
   display: block;
   margin: 0 auto;
+}
+footer img{
+  width: 20px;
+  margin-left: 10px;
 }
 
 /*============ 
