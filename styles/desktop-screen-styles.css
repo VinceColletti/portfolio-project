@@ -9,6 +9,8 @@ This is for screens 1024px and up
   =====================*/
 
   .main-lg > h1{
+    font-family: 'sports-01';
+    word-spacing: -20px;
     display: inline-block;
     margin-top: 20px;
     margin-left: 10px;
