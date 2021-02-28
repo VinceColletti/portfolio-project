@@ -99,26 +99,34 @@ main > p > a{
 Links & Link effects
 ==================*/
 
+.drop-hover:hover{
+  color: rgb(199, 0, 0);
+}
 main > p > a{
   white-space: nowrap;
 }
 main > p > a:hover{
-  color: red;
+  color: rgba(199, 0, 0, 0.8);
+}
+.my-hover{
+  transition: transform 150ms;
 }
 .my-hover:hover{
-  color: red !important;
+  color: rgb(255, 100, 100) !important;
 }
 .top-stories > a{
   display: block;
   color: black;
   text-decoration: none;
   margin: 5px 0 0 10%;
+  transition: transform 150ms;
 }
 .top-stories > a:last-child{
   padding-bottom: 10px;
 }
 .top-stories > a:hover{
-  color: red;
+  color: rgb(199, 0, 0);
+  transform: scale(1.2) translateX(21px);
 }
 
 /*============== 
@@ -128,6 +136,9 @@ inputs
 button{
   height: 40px;
   box-shadow: 3px 3px 2px black;
+}
+.my-toggler{
+  background-color:  rgb(73, 73, 73);
 }
 .search-box{
   height: 35px;
@@ -144,16 +155,24 @@ button{
   color: white;
   margin-right: 10px;
   font-size: 1.3em;
+  transition: transform 100ms;
 }
 .sign-up-button{
   width: 40%;
   font-size: 1.3em;
+  transition: transform 100ms;
 }
 .subscribe-button{
   background-color: #ffe59a;
   width: 75%;
   margin: 20px 0 30px;
   font-size: 1.3em;
+  transition: transform 100ms;
+}
+.sign-in-button:hover, 
+.sign-up-button:hover, 
+.subscribe-button:hover{
+  transform: scale(1.05);
 }
 .subscribe > input{
   width: 75%;

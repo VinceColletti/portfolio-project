@@ -4,6 +4,14 @@ This is for screen sizes from 740px to 1023px
 
 @media only screen and (min-width:740px){
 
+  /*=========================== 
+  Link effect intermediate size 
+  ===========================*/
+
+  .my-hover-lg-int:hover{
+    transform: scale(1.2);
+  }
+
   /*========================== 
   intermediate size containers 
   ==========================*/
