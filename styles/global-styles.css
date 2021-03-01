@@ -37,12 +37,12 @@ Sports fonts
 ==========*/
 
 @font-face{
-  font-family: 'sports-01';
-  src: url(sports-font-01.ttf) format('truetype');
+  font-family: 'glitch-esports';
+  src: url(glitch-esports.ttf) format('truetype');
 }
 @font-face{
-  font-family: 'sports-02';
-  src: url(sports-font-02.ttf);
+  font-family: 'recharge-font';
+  src: url(recharge-font.ttf);
 }
 
 /*=============== 
@@ -59,7 +59,7 @@ aside h5{
   margin-top: 60px;
 }
 h4{
-  font-family: 'sports-01';
+  font-family: 'glitch-esports';
   word-spacing: -10px;
   padding: 10px 0;
   font-size: 1.3em;
@@ -70,7 +70,7 @@ h6{
   margin-top: 3px;
 }
 .live-score-text{
-  font-family: 'sports-01';
+  font-family: 'glitch-esports';
   word-spacing: -20px;
   margin-top: 6px;
   font-size: 20pt;
@@ -86,7 +86,7 @@ main > ul{
   animation-iteration-count: infinite;
 }
 main > h1:first-of-type{
-  font-family: 'sports-01';
+  font-family: 'glitch-esports';
   color: red;
   display: inline-block;
   margin-top: 20px;
@@ -108,13 +108,13 @@ main > p > a{
 .team-box > h2,
 .team-box > h5,
 .game-mid-box > h1{
-  font-family: 'sports-02';
+  font-family: 'recharge-font';
 }
 .team-box > p{
   margin: 20px 0;
 }
 .top-stories > h2{
-  font-family: 'sports-01';
+  font-family: 'glitch-esports';
   padding: 10px 0 10px 10%;
   border-bottom: 3px solid black;
 }
