@@ -30,10 +30,6 @@ This is for screen sizes up to a maximum of 480px
   .game-container-sm{
     display: none;
   }
-  .main-sm > h1{
-    display: none;
-  }
-
   /*===================== 
   Small screen containers 
   =====================*/

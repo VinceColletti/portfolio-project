@@ -58,6 +58,15 @@ aside h5{
 .game-mid-box > p:first-of-type{
   margin-top: 60px;
 }
+h1{
+  font-family: 'glitch-esports';
+  color: red;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: -10px;
+  margin-right: 20px;
+  font-weight: lighter;
+}
 h4{
   font-family: 'glitch-esports';
   word-spacing: -10px;
@@ -85,14 +94,9 @@ main > ul{
   animation: liveBlink 1.5s;
   animation-iteration-count: infinite;
 }
-main > h1:first-of-type{
-  font-family: 'glitch-esports';
-  color: red;
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: -10px;
-  margin-right: 20px;
-  font-weight: lighter;
+
+main > h2{
+  display: none;
 }
 main > p{
   text-align: left;
@@ -104,10 +108,9 @@ main > p > a{
 .team-box > h5{
   margin-top: 10px;
 }
-.team-box > h1,
 .team-box > h2,
 .team-box > h5,
-.game-mid-box > h1{
+.game-mid-box > h2{
   font-family: 'recharge-font';
 }
 .team-box > p{

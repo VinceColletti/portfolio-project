@@ -8,9 +8,6 @@ This is for screen sizes from 481px to 739px
   display: none; on medium screens 
   ==============================*/
 
-  .main-md > h1{
-    display: none;
-  }
   .game-container-md{
     display: none;
   }
