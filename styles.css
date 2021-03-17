@@ -94,7 +94,6 @@ main > ul{
   animation: liveBlink 1.5s;
   animation-iteration-count: infinite;
 }
-
 main > h2{
   display: none;
 }
@@ -105,6 +104,17 @@ main > p{
 main > p > a{
   color: #346595;
 }
+.modal-body{
+  font-size: 1.4em;
+  overflow-wrap: break-word;
+}
+.modal-header{
+  border-bottom: 3px solid black;
+}
+.modal-title{
+  font-family: 'glitch-esports';
+  font-size: 1.5em;
+}
 .team-box > h5{
   margin-top: 10px;
 }
@@ -112,6 +122,10 @@ main > p > a{
 .team-box > h5,
 .game-mid-box > h2{
   font-family: 'recharge-font';
+}
+.team-box > h2:last-of-type{
+  cursor: default;
+  user-select: none;
 }
 .team-box > p{
   margin: 20px 0;
@@ -171,6 +185,9 @@ button{
 .my-toggler{
   background-color:  rgb(73, 73, 73);
 }
+#modal-close-button{
+  background-color: rgb(180, 0, 0);
+}
 .search-box{
   height: 35px;
   width: 165px !important;
@@ -193,7 +210,7 @@ button{
   font-size: 1.3em;
   transition: transform 100ms;
 }
-.subscribe-button{
+#subscribe-button{
   background-color: #ffe59a;
   width: 75%;
   margin: 20px 0 30px;
@@ -309,9 +326,12 @@ footer{
 Transforms 
 ========*/
 
+.team-box > h2:last-of-type:active{
+  box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
+}
 .sign-in-button:hover, 
 .sign-up-button:hover, 
-.subscribe-button:hover{
+#subscribe-button:hover{
   transform: scale(1.05);
 }
 .team-box > img:hover{

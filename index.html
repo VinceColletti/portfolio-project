@@ -86,13 +86,32 @@
             <button class="sign-up-button">Sign Up</button>
           </div>
         </div>
-        <div class="subscribe subscribe-sm subscribe-md subscribe-int subscribe-lg">
+        <div id="subscribe-block" class="subscribe subscribe-sm subscribe-md subscribe-int subscribe-lg">
           <h4>Never miss a play</h4>
           <h5>Get updates sent to your inbox!</h5>
-          <input class="form-control sm-2 mx-auto" type="email" placeholder="Email..." aria-label="Search">
-          <button class="subscribe-button">Subscribe</button>
+          <input id="subscribe-email" class="form-control sm-2 mx-auto" type="email"  placeholder="Email..." aria-label="Search" required>
+          <button id="subscribe-button" data-toggle="modal" data-target="#staticBackdrop">Subscribe</button>
         </div>
       </aside>
+
+      <!-- begin modal -->
+
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id="modal-title" class="modal-title" id="staticBackdropLabel"></h5>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+              <button id="modal-close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end modal -->
+
       <main class="main-sm main-md main-lg">
         <ul><li></li></ul>
         <h1>Live</h1>
@@ -100,11 +119,11 @@
         <h2>Ninjas Leading Pirates</h2>
         <div class="game-container-sm game-container-md game-container-lg">
           <div class="team-box">
-            <img src="./images/ninja.jpg" alt="Ninja logo">
+            <img id="ninja-image" src="./images/ninja.jpg" alt="Ninja logo">
             <h5>San Jose</h5>
             <h2>Ninjas</h2>
             <p>10 W - 3 L</p>
-            <h2>314</h2>
+            <h2 id="ninjas-score">0</h2>
           </div>
           <div class="game-mid-box">
             <h2>VS</h2>
@@ -112,11 +131,11 @@
             <p>2nd period</p>
           </div>
           <div class="team-box">
-            <img src="./images/pirate.png" alt="Pirate logo">
+            <img id="pirate-image" src="./images/pirate.png" alt="Pirate logo">
             <h5>Nova Scotia</h5>
             <h2>Pirates</h2>
             <p>12 W - 2 L</p>
-            <h2>159</h2>
+            <h2 id="pirates-score">0</h2>
           </div>
         </div>
         <p class="game-text-sm game-text-md game-text-lg">A conservative match between the two top-performing sides in the Central League Division with a number 1 seed at stake... <a href="#">get live updates</a></p>
