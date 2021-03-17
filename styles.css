@@ -38,11 +38,11 @@ Sports fonts
 
 @font-face{
   font-family: 'glitch-esports';
-  src: url(glitch-esports.ttf) format('truetype');
+  src: url(./fonts/glitch-esports.ttf) format('truetype');
 }
 @font-face{
   font-family: 'recharge-font';
-  src: url(recharge-font.ttf);
+  src: url(./fonts/recharge-font.ttf);
 }
 
 /*=============== 
