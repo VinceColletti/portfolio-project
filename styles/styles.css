@@ -1,0 +1,591 @@
+/*======= 
+CSS Reset 
+=======*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+table,
+th,
+td,
+embed,
+object {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*========== 
+Sports fonts 
+==========*/
+
+@font-face{
+  font-family: 'glitch-esports';
+  src: url(glitch-esports.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'recharge-font';
+  src: url(recharge-font.ttf);
+}
+
+/*=============== 
+Global Typography
+===============*/
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+aside h5{
+  font-size: 1em;
+}
+.game-mid-box > p:first-of-type{
+  margin-top: 60px;
+}
+h1{
+  font-family: 'glitch-esports';
+  color: red;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: -10px;
+  margin-right: 20px;
+  font-weight: lighter;
+}
+h4{
+  font-family: 'glitch-esports';
+  word-spacing: -10px;
+  padding: 10px 0;
+  font-size: 1.3em;
+}
+h6{
+  font-size: .75em;
+  font-weight: bold;
+  margin-top: 3px;
+}
+.live-score-text{
+  font-family: 'glitch-esports';
+  word-spacing: -20px;
+  margin-top: 6px;
+  font-size: 20pt;
+  color: red;
+}
+main > ul{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2em;
+  margin-top: 20px;
+  color: red;
+  animation: liveBlink 1.5s;
+  animation-iteration-count: infinite;
+}
+
+main > h2{
+  display: none;
+}
+main > p{
+  text-align: left;
+  border-top: 3px solid black;
+}
+main > p > a{
+  color: #346595;
+}
+.team-box > h5{
+  margin-top: 10px;
+}
+.team-box > h2,
+.team-box > h5,
+.game-mid-box > h2{
+  font-family: 'recharge-font';
+}
+.team-box > p{
+  margin: 20px 0;
+}
+.top-stories > h2{
+  font-family: 'glitch-esports';
+  padding: 10px 0 10px 10%;
+  border-bottom: 3px solid black;
+}
+
+/*================== 
+Links & Link effects
+==================*/
+
+.drop-hover:hover{
+  color: rgb(199, 0, 0);
+}
+footer a{
+  white-space: nowrap;
+  color: #346595;
+}
+footer a:hover{
+  text-decoration: none;
+  color: rgb(199, 0, 0);
+}
+main > p > a{
+  white-space: nowrap;
+}
+main > p > a:hover{
+  color: rgba(199, 0, 0, 0.8);
+}
+.my-hover{
+  transition: transform 100ms;
+}
+.my-hover:hover{
+  color: rgb(255, 100, 100) !important;
+}
+.top-stories > a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin: 5px 0 0 10%;
+  transition: transform 150ms;
+}
+.top-stories > a:last-child{
+  padding-bottom: 10px;
+}
+
+/*============== 
+inputs
+==============*/
+
+button{
+  height: 40px;
+  box-shadow: 3px 3px 2px black;
+}
+.my-toggler{
+  background-color:  rgb(73, 73, 73);
+}
+.search-box{
+  height: 35px;
+  width: 165px !important;
+}
+.search-btn{
+  height: 35px;
+  vertical-align: top;
+  box-shadow: none;
+}
+.sign-in-button{
+  background-color: #2b77e4;
+  width: 40%;
+  color: white;
+  margin-right: 10px;
+  font-size: 1.3em;
+  transition: transform 100ms;
+}
+.sign-up-button{
+  width: 40%;
+  font-size: 1.3em;
+  transition: transform 100ms;
+}
+.subscribe-button{
+  background-color: #ffe59a;
+  width: 75%;
+  margin: 20px 0 30px;
+  font-size: 1.3em;
+  transition: transform 100ms;
+}
+.subscribe > input{
+  width: 75%;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px solid rgb(61, 61, 61);
+}
+
+/*=============== 
+Images & Video 
+===============*/
+
+.DSNN-logo{
+  width: 100px;
+}
+.team-box > img{
+  width: 150px;
+  border: 1px solid rgb(160, 160, 160);
+  transition: transform 50ms;
+}
+iframe{
+  display: block;
+  margin: 0 auto;
+}
+footer img{
+  width: 20px;
+  margin-left: 10px;
+}
+
+/*============ 
+containers 
+============*/
+
+aside{
+  display: flex;
+  margin-top: 20px;
+}
+main{
+  background-color: white;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+footer{
+  background-color: rgb(168, 168, 168);
+  min-height: 40px;
+  text-align: center;
+  margin-top: auto;
+  border-top: 1px solid gray;
+  order: 10;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 50px 0;
+}
+.content{
+  display: flex;
+  justify-content: center;
+}
+.game-mid-box{
+  width: 160px;
+  padding-top: 30px;
+}
+.my-navbar{
+  background-color: rgb(22, 22, 22);
+  min-height: 40px;
+}
+.live-score{
+  margin-top: 5px;
+}
+.score-tracker{
+  background-color: white;
+  display: flex;
+  min-height: 40px;
+}
+.sign-in{
+  background-color: white;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+.subscribe{
+  background-color: white;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+.team-box{
+  width: 160px;
+  margin-bottom: 30px;
+}
+.top-stories{
+  background-color: white;
+  width: 300px;
+  height: 220px;
+  border-radius: 10px;
+}
+.wrapper{
+  background-color: #ddd;
+  min-height: 100vh;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*======== 
+Transforms 
+========*/
+
+.sign-in-button:hover, 
+.sign-up-button:hover, 
+.subscribe-button:hover{
+  transform: scale(1.05);
+}
+.team-box > img:hover{
+  transform: scale(1.2) translateY(-7px);
+  box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.774);
+}
+.team-box > img[src*="ninja"]:active{
+  transform: scale(.8) translateY(-7px) rotateZ(25deg);
+  box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
+}
+.team-box > img[src*="pirate"]:active{
+  transform: scale(.8) translateY(-7px) rotateZ(-25deg);
+  box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
+}
+.top-stories > a:hover{
+  color: rgb(199, 0, 0);
+  transform: scale(1.2) translateX(21px);
+}
+
+/*========= 
+Animation 
+==========*/
+
+@keyframes liveBlink{
+  from{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  95%{
+    opacity: 0 ;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+/*===============================================
+This is for screen sizes up to a maximum of 480px 
+===============================================*/
+
+@media only screen and (max-width: 480px){
+
+  /*====================== 
+  small screen typography 
+  ======================*/
+
+  .game-text-sm{
+    display: block;
+    padding: 20px 25px 0 25px;
+    height: 75px;
+    overflow-y: scroll;
+  }
+
+  /*================ 
+  small screen movie 
+  =================*/
+
+  .iframe-sm{
+    width: 100%;
+  }
+
+  /*============================ 
+  display: none; on small screen 
+  ============================*/
+
+  .game-container-sm{
+    display: none;
+  }
+  /*===================== 
+  Small screen containers 
+  =====================*/
+
+  .aside-sm{
+    width: 100%;
+    order: 4;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .content-sm{
+    flex-direction: column;
+  }
+  .main-sm{
+    width: 100%;
+    height: 420px;
+    order: 2;
+  }
+  .score-tracker-sm{
+    flex-direction: column;
+    text-align: center;
+    font-size: .8em;
+    margin-top: 20px;
+    order: 3;
+  }
+  .sign-in-sm{
+    align-self: center;
+    margin: 20px 0;
+  }
+  .subscribe-sm{
+    align-self: center;
+  }
+  .top-stories-sm{
+    align-self: center;
+    height: auto;
+  }
+}
+
+/*========================================== 
+This is for screen sizes from 481px to 739px 
+==========================================*/
+
+@media only screen and (min-width: 481px){
+
+  /*============================== 
+  display: none; on medium screens 
+  ==============================*/
+
+  .game-container-md{
+    display: none;
+  }
+  
+  /*====================== 
+  Medium screen containers 
+  ======================*/
+
+  .aside-md{
+    width: 300px;
+    order: 4;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .content-md{
+    flex-direction: column;
+  }
+  .game-text-md{
+    display: block;
+    padding: 20px 15px 0 15px;
+  }
+  .main-md{
+    width: 480px;
+    height: 435px;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: 20px;
+    order: 1;
+  }
+  .score-tracker-md{
+    justify-content: space-around;
+    font-size: .62em;
+  }
+  .sign-in-md{
+    margin-top: 20px;
+  }
+  .subscribe-md{
+    margin-top: 20px;
+  }
+}
+
+/*=========================================== 
+This is for screen sizes from 740px to 1023px 
+===========================================*/
+
+@media only screen and (min-width:740px){
+
+  /*=========================== 
+  Link effect intermediate size 
+  ===========================*/
+
+  .my-hover-lg-int:hover{
+    transform: scale(1.2);
+  }
+
+  /*========================== 
+  intermediate size containers 
+  ==========================*/
+
+  .aside-int{
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    order: 2;
+  }
+  .score-tracker-int{
+    justify-content: space-around;
+    font-size: .8em;
+  }
+  .sign-in-int{
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .subscribe-int{
+    margin: 0 0 0 10px;
+  }
+}
+
+/*=============================== 
+This is for screens 1024px and up 
+===============================*/
+
+@media only screen and (min-width: 1024px){
+
+  /*===================== 
+  large screen typography 
+  =====================*/
+
+  .main-lg > h2{
+    font-family: 'glitch-esports';
+    word-spacing: -20px;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .game-text-lg{
+    display: block;
+    padding: 20px 80px 0 80px;
+  }
+
+  /*======================= 
+  Link effects large screen 
+  =======================*/
+
+  .my-hover-lg-int:hover{
+    transform: scale(1.2);
+  }
+
+  /*============================= 
+  display: none; on large screens 
+  =============================*/
+
+  .iframe-lg{
+    display: none;
+  }
+
+  /*===================== 
+  large screen containers 
+  =====================*/
+
+  .aside-lg{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    width: 300px;
+    order: 1;
+  }
+  .content-lg{
+    flex-direction: row;
+  }
+  .game-container-lg{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+  }
+  .main-lg{
+    width: 700px;
+    height: 550px;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    order: 2;
+  }
+  .score-tracker-lg{
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: .8em;
+    padding: 0 100px 0 100px;
+  }
+  .sign-in-lg, .subscribe-lg{
+    margin-top: 25px;
+    margin-left: 0;
+  }
+}
