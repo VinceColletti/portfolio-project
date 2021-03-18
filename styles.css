@@ -181,6 +181,7 @@ inputs
 button{
   height: 40px;
   box-shadow: 3px 3px 2px black;
+  border-radius: 5px;
 }
 .my-toggler{
   background-color:  rgb(73, 73, 73);
@@ -209,6 +210,12 @@ button{
   width: 40%;
   font-size: 1.3em;
   transition: transform 100ms;
+}
+#start-game-button{
+  width: 100px;
+  margin-top: 30px;
+  background-color: rgb(180, 0, 0);
+  color: white;
 }
 #subscribe-button{
   background-color: #ffe59a;
@@ -337,7 +344,8 @@ Transforms
   box-shadow: 0px 0px 10px 3px rgba(255, 0, 0, 0.589);
 }
 .sign-in-button:hover, 
-.sign-up-button:hover, 
+.sign-up-button:hover,
+#start-game-button:hover, 
 #subscribe-button:hover{
   transform: scale(1.05);
 }
