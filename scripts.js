@@ -112,22 +112,27 @@ $(document).ready(function(){
     $('#staticBackdrop').addClass('show')
   })
 
-  // $ajax({
-  //   url: 'https://newsapi.org/v2/sources?category=sportsapiKey=879e5be366314907b393fae52e898138',
-  //   dataType: 'json',
-  //   success: function(data){
-  //     console.log(data)
-  //   }
-  // })
-  $('#temp-button').click(function(){
-    getStories()
+
+  // theSportsDb
+  // NFL league ID: 4391
+  // NCAA Basketball Mens ID: 4607
+  $.ajax({
+    // last 15 events for NCAA basketball
+    url: 'https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4607',
+    dataType: 'json',
+    success: function(data) {
+      // console.log(data)
+      $('#live-score-text').text('March Madness')
+      for(i=0; i<4; i++){
+        let homeTeam = data.events[i].strHomeTeam
+        let homeScore = data.events[i].intHomeScore
+        let awayTeam = data.events[i].strAwayTeam
+        let awayScore = data.events[i].intAwayScore
+        let scoreText = '<p>'+homeTeam+'► '+homeScore+'</p><p>'+awayTeam+'► '+awayScore+'</p>'
+        $('#score-'+i).html(scoreText)
+      }
+    }
+    
   })
-  function getStories(){
-    fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=879e5be366314907b393fae52e898138').then((res)=>{
-      return res.json()
-    }).then((data)=>{
-      console.log(data)
-    })
-  }
 
 })

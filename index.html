@@ -12,20 +12,20 @@
 <body>
   <div class="wrapper">
     <div class="score-tracker score-tracker-sm score-tracker-md score-tracker-int score-tracker-lg">
-      <p class="live-score-text">Live Scores</p>
-      <div class="live-score">
+      <p id="live-score-text"  class="live-score-text">Live Scores</p>
+      <div id="score-0" class="live-score">
         <p>SJC Ninjas► 314</p>
         <p>NS Pirates► 159</p>
       </div>
-      <div class="live-score">
+      <div id="score-1" class="live-score">
         <p>CHI Samurai► 0</p>
         <p>TUL Wizards► 0</p>
       </div>
-      <div class="live-score">
+      <div id="score-2" class="live-score">
         <p>BOS Hackers► 13</p>
         <p>TYO Youkai► 37</p>
       </div>
-      <div class="live-score">
+      <div id="score-3" class="live-score">
         <p>BOI Knights► 5</p>
         <p>SEA Sea Lions► 11</p>
       </div>
@@ -93,25 +93,6 @@
           <button id="subscribe-button" data-toggle="modal" data-target="#staticBackdrop">Subscribe</button>
         </div>
       </aside>
-
-      <!-- begin modal -->
-
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 id="modal-title" class="modal-title" id="staticBackdropLabel"></h5>
-            </div>
-            <div id="modal-body" class="modal-body"></div>
-            <div class="modal-footer">
-              <button id="modal-close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- end modal -->
-
       <main class="main-sm main-md main-lg">
         <ul><li></li></ul>
         <h1>Live</h1>
@@ -130,7 +111,6 @@
             <p id="count-down-timer"></p>
             <p id="period-count"></p>
             <button id="start-game-button">Play</button>
-            <button id="temp-button">temp</button>
           </div>
           <div class="team-box">
             <img id="pirate-image" src="./images/pirate.png" alt="Pirate logo">
@@ -152,12 +132,29 @@
         <a href="https://www.linkedin.com/in/vincecolletti/" target="_blank">Follow me on LinkedIn</a>
       </h6>
     </footer>
+
+    <!-- begin modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modal-title" class="modal-title" id="staticBackdropLabel"></h5>
+          </div>
+          <div id="modal-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <button id="modal-close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
   </div>
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   
   <script src="./scripts.js"></script>
