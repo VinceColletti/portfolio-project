@@ -28,6 +28,8 @@
         <div id="score-1" class="live-score"></div>
         <div id="score-2" class="live-score"></div>
         <div id="score-3" class="live-score"></div>
+        <div id="score-4" class="live-score"></div>
+        <div id="score-5" class="live-score"></div>
       </div>
       <nav class="navbar navbar-expand-md navbar-dark my-navbar">
         <a class="navbar-brand" href="#">
@@ -121,7 +123,7 @@
         <aside class="aside-sm aside-md aside-int aside-lg">
           <div class="top-stories top-stories-sm">
             <h2>Top Stories</h2>
-            <a href="#">Ninjas up big in 5th</a>
+            <a href="#">Pirates up big in the 4th</a>
             <a href="#">Top Sports Cities</a>
             <a href="#">Choi Joins Hall of Fame</a>
             <a href="#">Tournament Underway</a>
@@ -143,8 +145,8 @@
             <h5>Get updates sent to your inbox!</h5>
             <input
               id="subscribe-email"
-              class="form-control sm-2 mx-auto"
               type="email"
+              class="form-control sm-2 mx-auto"
               placeholder="Email..."
               aria-label="Search"
               required
@@ -183,8 +185,9 @@
             <div class="game-mid-box">
               <h2>VS</h2>
               <p id="count-down-timer"></p>
-              <p id="period-count"></p>
-              <button id="start-game-button">Play</button>
+              <p id="period-count">4th period</p>
+              <p>Click the portraits or the scores</p>
+              <button id="start-game-button">Start</button>
             </div>
             <div class="team-box">
               <img
@@ -202,6 +205,11 @@
             A conservative match between the two top-performing sides in the
             Central League Division with a number 1 seed at stake...
             <a href="#">get live updates</a>
+          </p>
+          <p class="alt-text-sm alt-text-md alt-text-lg">
+            Pirates set to dominate the Ninjas, ending the league's biggest
+            Cinderella Story. Can the Ninjas find victory?
+            <span>Press the red button to find out!</span>
           </p>
         </main>
       </div>
@@ -228,17 +236,12 @@
         data-backdrop="static"
         data-keyboard="false"
         tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5
-                id="modal-title"
-                class="modal-title"
-                id="staticBackdropLabel"
-              ></h5>
+              <h5 id="modal-title" class="modal-title">hello</h5>
             </div>
             <div id="modal-body" class="modal-body"></div>
             <div class="modal-footer">
@@ -261,13 +264,11 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-
     <script src="./scripts.js"></script>
   </body>
 </html>

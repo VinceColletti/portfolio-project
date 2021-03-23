@@ -3,25 +3,22 @@ $(document).ready(function(){
   // NFL league ID: 4391
   // NCAA Basketball Mens league ID: 4607
   $.ajax({
-    // last 15 events for NCAA basketball
     url: 'https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4607',
     dataType: 'json',
     success: function(data) {
-      // console.log(data)
-      $('#live-score-text').text('March Madness')
-      for(i=0; i<4; i++){
+      // console.log(data);
+      $('#live-score-text').text('March Madness');
+      // display latest scores
+      for(i=0; i<6; i++){
         let homeTeam = data.events[i].strHomeTeam;
         let homeScore = data.events[i].intHomeScore;
         let awayTeam = data.events[i].strAwayTeam;
         let awayScore = data.events[i].intAwayScore;
-        let scoreText = '<p>'+homeTeam+'► '+homeScore+'</p><p>'+awayTeam+'► '+awayScore+'</p>';
+        let scoreText = '<p>'+awayTeam+': '+awayScore+'</p><p>'+homeTeam+': '+homeScore+'</p>';
         $('#score-'+i).html(scoreText);
-      }
+      };
     }
   });
-
-    // How to show the modal
-    // $('#staticBackdrop').modal('show')
 
   // if the email address is blank, nothing happens when subscribe button is clicked. otherwise, subscribe box dissappears when you close the modal
   $('#subscribe-button').click(function(){
@@ -48,30 +45,32 @@ $(document).ready(function(){
   });
 
   // Script to increment the scores while game is not running
-  let ninjasScore = 0;
-  let piratesScore = 0;
+  let ninjasScoreTemp = 0;
+  let piratesScoreTemp = 0;
   $('#ninja-image, #ninjas-score').click(function(){
-    ninjasScore++;
-    $('#ninjas-score').text(ninjasScore);
+    ninjasScoreTemp++;
+    $('#ninjas-score').text(ninjasScoreTemp);
   });
   $('#pirate-image, #pirates-score').click(function(){
-    piratesScore++;
-    $('#pirates-score').text(piratesScore);
+    piratesScoreTemp++;
+    $('#pirates-score').text(piratesScoreTemp);
   });
 
   // script for click game
   let timer = 15;
-  let period = 4;
-  $('#period-count').text('Period: '+period);
   $('#count-down-timer').text('0:'+timer+' remaining');
   $('#start-game-button').click(function(){
     $('#start-game-button').hide();
 
     // initialize scores
-    let ninjasScore = 0;
-    let piratesScore = 0;
+    let ninjasScore = 115;
+    let piratesScore = 176;
     $('#ninjas-score').text(ninjasScore);
     $('#pirates-score').text(piratesScore);
+
+    alert('\nCan the Ninjas click their way to victory?\n\nOnly 15 seconds left in the game!')
+    
+    // increment on click
     $('#ninja-image, #ninjas-score').click(function(){
       ninjasScore++;
       $('#ninjas-score').text(ninjasScore);
@@ -87,47 +86,42 @@ $(document).ready(function(){
         timer--;
       } 
       else{
-        if(period === 4){
-          //end game
-          clearInterval(timeRemaining);
-          $('#staticBackdrop').modal('show');
-          $('#modal-title').text("Game Over");
-          $('#modal-body').text('');
-          if(ninjasScore === piratesScore){
-            $('#modal-body').text('The game is tied at '+ninjasScore+' points');
-          } 
-          else{
-            if(ninjasScore > piratesScore){
-              $('#modal-body').append('<img src="./images/ninja.jpg" alt="Ninja logo" style="width: 100px">');
-              $('#modal-body').append('The score is '+ninjasScore+' to '+piratesScore+'\n Ninjas Win!!!');
-            } 
-            else{
-              $('#modal-body').append('<img id="pirate-image" src="./images/pirate.png" alt="Pirate logo" style="width: 100px">');
-              $('#modal-body').append('The score is '+piratesScore+' to '+ninjasScore+'\n Pirates Win!!!');
-            };
-          };
-        // keep rolling through the periods
+        // if timer = 0, end the game
+        clearInterval(timeRemaining);
+        $('#staticBackdrop').modal('show');
+        $('#modal-title').text("Game Over");
+        $('#modal-body').text('');
+        if(ninjasScore === piratesScore){
+          // Game is tied
+          $('#modal-body').text('The game is tied at '+ninjasScore+' points');
+          $('#modal-body').append('<img src="./images/ninja.jpg" alt="Ninja logo" style="width: 82px; display: inline-block">');
+          $('#modal-body').append('<img id="pirate-image" src="./images/pirate.png" alt="Pirate logo" style="width: 82px; display: inline-block">');
+          $('#modal-close-button').click(function(){
+            $('#start-game-button').show();
+            timer = 15;
+            $('#count-down-timer').text('0:'+timer+' remaining');
+          });
         } 
         else{
-          if(period === 3){
-            alert('The third period is over');
-            period++;
-            $('#period-count').text('Period: '+period);
-            timer = 15;
+          if(ninjasScore > piratesScore){
+            // Ninjas win
+            $('#modal-body').append('<img src="./images/ninja.jpg" alt="Ninja logo" style="width: 100px">');
+            $('#modal-body').append('Ninjas Win '+ninjasScore+' to '+piratesScore+'!!!');
+            $('#modal-close-button').click(function(){
+              $('#start-game-button').show();
+              timer = 15;
+              $('#count-down-timer').text('0:'+timer+' remaining');
+            });
           } 
           else{
-            if(period === 2){
-              alert('it\'s Halftime!');
-              period++;
-              $('#period-count').text('Period: '+period);
+            // Pirates win
+            $('#modal-body').append('<img id="pirate-image" src="./images/pirate.png" alt="Pirate logo" style="width: 100px">');
+            $('#modal-body').append('Pirates Win '+piratesScore+' to '+ninjasScore+'!!!');
+            $('#modal-close-button').click(function(){
+              $('#start-game-button').show();
               timer = 15;
-            } 
-            else{
-              alert('The 1st period is over');
-              period++;
-              $('#period-count').text('Period: '+period);
-              timer = 15;
-            };
+              $('#count-down-timer').text('0:'+timer+' remaining');
+            });
           };
         };
       };
