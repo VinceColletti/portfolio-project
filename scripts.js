@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // theSportsDb
+  // theSportsDb
   // NFL league ID: 4391
   // NCAA Basketball Mens league ID: 4607
   $.ajax({
@@ -16,7 +16,28 @@ $(document).ready(function(){
         let awayScore = data.events[i].intAwayScore;
         let scoreText = '<p>'+awayTeam+': '+awayScore+'</p><p>'+homeTeam+': '+homeScore+'</p>';
         $('#score-'+i).html(scoreText);
+        $('#score-'+i).attr('index', i);
       };
+
+      // bring up a modal when user clicks on a game score
+      $('#score-0, #score-1, #score-2, #score-3, #score-4, #score-5').click(function(){
+        // console.log(data);
+        let i = $(this).attr('index');
+        let titleText = data.events[i].strEvent;
+        // all the variables for the modal body text
+        let homeTeam = data.events[i].strHomeTeam;
+        let homeScore = data.events[i].intHomeScore;
+        let homeTeamId = data.events[i].idHomeTeam;
+        let awayTeam = data.events[i].strAwayTeam;
+        let awayScore = data.events[i].intAwayScore;
+        let awayTeamId = data.events[i].idAwayTeam;
+
+        // Piece together the modal body contents
+        let bodyText = '<div style="display: flex; justify-content: space-between"><a style="color: black" href="https://www.thesportsdb.com/team/'+homeTeamId+'" target="_blank">'+homeTeam+'</a><span>'+homeScore+'</span></div><div style="display: flex; justify-content: space-between"><a style="color: black" href="https://www.thesportsdb.com/team/'+awayTeamId+'" target="_blank">'+awayTeam+'</a><span>'+awayScore+'</span></div>';
+        $('#staticBackdrop').modal('show');
+        $('#modal-title').text(titleText);
+        $('#modal-body').html(bodyText);
+      });
     }
   });
 

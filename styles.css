@@ -166,6 +166,15 @@ main > p > a:hover {
 .my-hover:hover {
   color: rgb(255, 100, 100) !important;
 }
+#score-0,
+#score-1,
+#score-2,
+#score-3,
+#score-4,
+#score-5 {
+  cursor: pointer;
+  user-select: none;
+}
 .top-stories > a {
   display: block;
   color: black;

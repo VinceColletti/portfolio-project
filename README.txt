@@ -17,6 +17,7 @@ https://youtu.be/j9pzRgDGZV0
 
 • Added API functionality:
   – Displays the latest NCAA Mens Basketball updates in the .score-tracker
+  – When user clicks on a score, a modal pops up with more links
   – https://www.thesportsdb.com/
 
 • Added functionality to subscribe button:
