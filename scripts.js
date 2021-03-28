@@ -7,7 +7,7 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(data) {
       // console.log(data);
-      $('#live-score-text').text('March Madness');
+      $('#live-score-text').text('Sweet 16');
       // display latest scores
       for(i=0; i<6; i++){
         let homeTeam = data.events[i].strHomeTeam;
